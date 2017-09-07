@@ -1,0 +1,34 @@
+{
+  "name": "@itrulia/rb6-automation-server",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "nodemon": "nodemon -L",
+    "start": "node index.js",
+    "prestart:prod": "tsc",
+    "start:prod": "PORT=80 forever -a start ./forever.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^3.0.0",
+    "@nestjs/core": "^3.0.1",
+    "@nestjs/microservices": "^3.0.1",
+    "@nestjs/testing": "^3.0.0",
+    "@nestjs/websockets": "^3.0.0",
+    "@types/node": "^8.0.20",
+    "@types/q": "^1.0.3",
+    "@types/request-promise-native": "^1.0.6",
+    "forever": "^0.15.3",
+    "mongoose": "^4.11.7",
+    "redis": "^2.7.1",
+    "reflect-metadata": "^0.1.10",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
+    "rxjs": "^5.4.3",
+    "ts-node": "^3.1.0",
+    "typescript": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
