@@ -14,4 +14,13 @@ export class TournamentController {
         const data = await this.tournament.getPodium(tournamentId);
         res.status(HttpStatus.OK).json(data);
     }
+
+    @Get("tournament/:tournamentId")
+    public async findTournament(
+        @Response() res: Res,
+        @Param("tournamentId") tournamentId: number
+    ) {
+        const data = await this.tournament.getTournament(tournamentId);
+        res.status(HttpStatus.OK).json(data);
+    }
 }
