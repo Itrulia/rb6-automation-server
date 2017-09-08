@@ -6,7 +6,7 @@ import {TeamRepository} from "./team.repository";
 export class TeamController {
     constructor(private team: TeamRepository) {}
 
-    @Get("team/teamIds")
+    @Get("team/:teamIds")
     public async findPodium(
         @Response() res: Res,
         @Param("teamIds") teamIds: string
